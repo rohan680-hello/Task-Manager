@@ -2,7 +2,8 @@ import { useEffect, useMemo, useState } from 'react'
 import './App.css'
 
 const API_URL =
-  import.meta.env.VITE_API_URL || 'http://localhost:5000/api/tasks'
+  import.meta.env.VITE_API_URL ||
+  'https://task-manager-ra1a.onrender.com/api/tasks'
 
 export default function App() {
   const [tasks, setTasks] = useState([])
