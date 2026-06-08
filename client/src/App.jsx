@@ -214,6 +214,11 @@ export default function App() {
     })
   }, [filter, searchTerm, tasks])
 
+  const visibleTaskLabel =
+    filteredTasks.length === 1
+      ? 'Showing 1 task'
+      : `Showing ${filteredTasks.length} tasks`
+
   function isOverdue(dateStr, isCompleted) {
     if (!dateStr || isCompleted) {
       return false
@@ -227,14 +232,14 @@ export default function App() {
 
   return (
     <main className="min-h-screen bg-[#f7f3ea] text-stone-950">
-      <div className="mx-auto grid min-h-screen w-full max-w-7xl grid-cols-1 gap-0 lg:grid-cols-[380px_1fr]">
-        <aside className="border-b border-stone-200 bg-[#1f2933] px-5 py-6 text-white sm:px-8 lg:border-b-0 lg:border-r lg:border-stone-800 lg:py-8">
-          <div className="flex min-h-full flex-col gap-8">
+      <div className="grid min-h-screen w-full grid-cols-1 gap-0 lg:grid-cols-[360px_1fr] xl:grid-cols-[400px_1fr]">
+        <aside className="border-b border-stone-200 bg-[#1f2933] px-5 py-5 text-white sm:px-8 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto lg:border-b-0 lg:border-r lg:border-stone-800 lg:py-6">
+          <div className="flex min-h-full flex-col gap-6">
             <header>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-200">
                 Daily planner
               </p>
-              <h1 className="mt-4 text-4xl font-black leading-none sm:text-5xl">
+              <h1 className="mt-4 text-4xl font-black leading-none xl:text-5xl">
                 Daily Task Desk
               </h1>
               <p className="mt-4 max-w-sm text-sm leading-6 text-stone-300">
@@ -264,7 +269,7 @@ export default function App() {
               </div>
             </section>
 
-            <section className="rounded-lg border border-white/10 bg-[#223027] p-5">
+            <section className="rounded-lg border border-white/10 bg-[#223027] p-4">
               <div className="flex items-center justify-between text-sm font-semibold">
                 <span className="text-stone-200">Completion</span>
                 <span className="text-amber-200">{completionRate}%</span>
@@ -292,7 +297,7 @@ export default function App() {
                   value={title}
                 />
                 <textarea
-                  className="h-24 w-full resize-none rounded-md border border-stone-300 bg-stone-50 px-3 py-2.5 text-sm outline-none transition focus:border-amber-600 focus:bg-white"
+                  className="h-20 w-full resize-none rounded-md border border-stone-300 bg-stone-50 px-3 py-2.5 text-sm outline-none transition focus:border-amber-600 focus:bg-white"
                   onChange={(event) => setDescription(event.target.value)}
                   placeholder="Notes, if needed"
                   value={description}
@@ -321,7 +326,7 @@ export default function App() {
                 Work list
               </p>
               <h2 className="mt-2 text-3xl font-black leading-tight text-stone-950 sm:text-4xl">
-                Showing {filteredTasks.length} tasks
+                {visibleTaskLabel}
               </h2>
             </div>
 
