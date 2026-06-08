@@ -11,6 +11,15 @@ const DATA_FILE = path.join(__dirname, 'tasks.json');
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.json({
+        message: 'Personal Task Manager API is running',
+        endpoints: {
+            tasks: '/api/tasks'
+        }
+    });
+});
+
 async function readTasksFromFile() {
     try {
         const data = await fs.readFile(DATA_FILE, 'utf8');
