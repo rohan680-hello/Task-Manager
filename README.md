@@ -4,11 +4,8 @@ I chose Exercise 1, the Personal Task Manager. The app is a simple full-stack ta
 
 ## Live Demo Links
 
-Not deployed yet. I am keeping this section ready so I can add the final links after hosting the frontend and backend.
-
-Planned deployment:
-- Frontend: Vercel or Netlify
-- Backend: Render or Railway
+- Frontend: https://task-manager-kappa-rust.vercel.app
+- Backend: https://task-manager-ra1a.onrender.com
 
 ## Tech Stack
 
@@ -167,7 +164,6 @@ TaskManager/
 
 ## Next Steps
 
-- Deploy the frontend and backend, then add the live links in this README.
 - Add a few backend tests for creating, updating, and deleting tasks.
 - Add stricter validation for very long titles and invalid dates.
 - Add drag-and-drop ordering later as a bonus improvement.
