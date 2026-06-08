@@ -1,4 +1,4 @@
-# Daily Task Desk
+# Personal Task Manager
 
 I chose Exercise 1, the Personal Task Manager. The app is a simple full-stack task board for one user. A user can add daily tasks, update the details, mark work as done, filter the list, search by title, and keep the data saved in a JSON file on the backend.
 

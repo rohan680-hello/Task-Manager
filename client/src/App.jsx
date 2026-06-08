@@ -237,10 +237,10 @@ export default function App() {
           <div className="flex min-h-full flex-col gap-6">
             <header>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-200">
-                Daily planner
+                Personal planner
               </p>
               <h1 className="mt-4 text-4xl font-black leading-none xl:text-5xl">
-                Daily Task Desk
+                Personal Task Manager
               </h1>
               <p className="mt-4 max-w-sm text-sm leading-6 text-stone-300">
                 Add tasks, keep an eye on deadlines, and clear the list one step
